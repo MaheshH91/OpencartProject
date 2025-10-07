@@ -50,3 +50,29 @@
 2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
 2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
 2025-10-07 15:50:09 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
+2025-10-07 20:22:49 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
+2025-10-07 20:22:49 INFO  TC_002_LoginTest:49 - Execution Environment: local
+2025-10-07 20:22:49 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
+2025-10-07 20:22:49 INFO  TC_002_LoginTest:132 - Starting local browser execution...
+2025-10-07 20:23:04 INFO  TC_002_LoginTest:158 - Local browser started successfully
+2025-10-07 20:23:04 INFO  TC_002_LoginTest:170 - Navigating to: https://tutorialsninja.com/demo/
+2025-10-07 20:23:14 INFO  TC_002_LoginTest:174 - ===== Test Setup Completed =====
+2025-10-07 20:23:14 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-07 20:23:16 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
+2025-10-07 20:23:16 INFO  TC_002_LoginTest:180 - Closing browser...
+2025-10-07 20:23:17 INFO  TC_002_LoginTest:182 - Browser closed successfully
+2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
+2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
+2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
+2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:132 - Starting local browser execution...
+2025-10-07 20:23:20 INFO  TC001_AccountRegistrationTest:158 - Local browser started successfully
+2025-10-07 20:23:20 INFO  TC001_AccountRegistrationTest:170 - Navigating to: https://tutorialsninja.com/demo/
+2025-10-07 20:23:23 INFO  TC001_AccountRegistrationTest:174 - ===== Test Setup Completed =====
+2025-10-07 20:23:23 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-10-07 20:23:24 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
+2025-10-07 20:23:24 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
+2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
+2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:41 - Test passed
+2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
+2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
+2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
