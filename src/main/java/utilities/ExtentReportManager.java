@@ -121,7 +121,7 @@ public class ExtentReportManager implements ITestListener {
 		  email.setDataSourceResolver(new DataSourceUrlResolver(url));
 		  email.setHostName("smtp.rediffmail.com"); 
 		  email.setSmtpPort(25);
-		  email.setAuthenticator(new DefaultAuthenticator("holkarmahesh@rediffmail.com","Maa@12345")); 
+		  email.setAuthenticator(new DefaultAuthenticator("holkarmahesh@rediffmail.com","Pass@123")); 
 		  email.setSSLOnConnect(true);
 		  email.setFrom("holkarmahesh@rediffmail.com"); //Sender
 		  email.setSubject("Test Results");
