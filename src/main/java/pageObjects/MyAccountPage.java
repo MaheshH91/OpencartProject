@@ -21,13 +21,10 @@ public class MyAccountPage extends BasePage {
 			return (msgHeading.isDisplayed());	
 		} catch (Exception e) {
 			return false;
-		}
-		
-		
+		}	
 	}
 	
 	public void clickLogout() {
 		lnkLogout.click();
-		
 	}
 }

@@ -1,6 +1,3 @@
-@echo off
-REM Navigate to the directory where this batch file is located
-cd /d "%~dp0"
+cd C:\LaptopData\GroTechMindClass\OpencartProject 
 
-REM Run Maven tests from the current directory
 mvn test

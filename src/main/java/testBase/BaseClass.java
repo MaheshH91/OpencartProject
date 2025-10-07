@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -37,150 +39,122 @@ public class BaseClass {
     @BeforeClass(groups = {"Sanity", "Regression", "Master"})
     @Parameters({"os", "browser"})
     public void setup(@Optional("windows") String os, @Optional("chrome") String br) throws IOException {
-        
+
         // Load config.properties
-        FileReader file = new FileReader("./src/test/resources/config.properties");
+        String configPath = System.getProperty("user.dir") + File.separator + "src" + File.separator
+                + "test" + File.separator + "resources" + File.separator + "config.properties";
+        FileReader file = new FileReader(configPath);
         p = new Properties();
         p.load(file);
         file.close();
 
         logger = LogManager.getLogger(this.getClass());
         logger.info("===== Starting Test Setup =====");
-        logger.info("Execution Environment: " + p.getProperty("execution_env"));
-        logger.info("OS: " + os + ", Browser: " + br);
+        logger.info("Execution Environment: {}", p.getProperty("execution_env"));
+        logger.info("OS: {}, Browser: {}", os, br);
 
-        if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
-            // Remote execution (Selenium Grid)
-            String gridUrl = p.getProperty("grid.url", "http://localhost:4444");
-            logger.info("Grid URL: " + gridUrl);
+        String execEnv = p.getProperty("execution_env", "local").toLowerCase();
+
+        if (execEnv.equals("remote")) {
+            // -------- Remote Execution --------
+            String gridUrl = p.getProperty("grid.url", "http://localhost:4444/wd/hub");
+            logger.info("Running on Selenium Grid: {}", gridUrl);
 
             switch (br.toLowerCase()) {
                 case "chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    
-                    // Set platform using proper method
-                    if (os.equalsIgnoreCase("windows")) {
-                        chromeOptions.setCapability("platformName", Platform.WINDOWS);
-                    } else if (os.equalsIgnoreCase("linux")) {
-                        chromeOptions.setCapability("platformName", Platform.LINUX);
-                    } else if (os.equalsIgnoreCase("mac")) {
-                        chromeOptions.setCapability("platformName", Platform.MAC);
-                    } else {
-                        logger.error("Unsupported OS: " + os);
-                        throw new IllegalArgumentException("Invalid OS: " + os);
-                    }
-                    
-                    // Chrome-specific options
-                    chromeOptions.addArguments("--start-maximized");
-                    chromeOptions.addArguments("--disable-notifications");
-                    chromeOptions.addArguments("--disable-popup-blocking");
+                    setPlatform(os, chromeOptions);
+                    chromeOptions.addArguments("--start-maximized", "--disable-notifications", "--disable-popup-blocking");
                     chromeOptions.setCapability("se:name", "Remote Chrome Test - " + os);
-                    logger.info("Attempting to connect to Chrome on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
                     break;
 
                 case "firefox":
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    
-                    if (os.equalsIgnoreCase("windows")) {
-                        firefoxOptions.setCapability("platformName", Platform.WINDOWS);
-                    } else if (os.equalsIgnoreCase("linux")) {
-                        firefoxOptions.setCapability("platformName", Platform.LINUX);
-                    } else if (os.equalsIgnoreCase("mac")) {
-                        firefoxOptions.setCapability("platformName", Platform.MAC);
-                    } else {
-                        logger.error("Unsupported OS: " + os);
-                        throw new IllegalArgumentException("Invalid OS: " + os);
-                    }
-                    
+                    setPlatform(os, firefoxOptions);
                     firefoxOptions.setCapability("se:name", "Remote Firefox Test - " + os);
-                    	
-                    logger.info("Attempting to connect to Firefox on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
                     break;
 
                 case "edge":
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    
-                    if (os.equalsIgnoreCase("windows")) {
-                        edgeOptions.setCapability("platformName", Platform.WINDOWS);
-                    } else if (os.equalsIgnoreCase("linux")) {
-                        edgeOptions.setCapability("platformName", Platform.LINUX);
-                    } else if (os.equalsIgnoreCase("mac")) {
-                        edgeOptions.setCapability("platformName", Platform.MAC);
-                    } else {
-                        logger.error("Unsupported OS: " + os);
-                        throw new IllegalArgumentException("Invalid OS: " + os);
-                    }
-                    
+                    setPlatform(os, edgeOptions);
                     edgeOptions.setCapability("se:name", "Remote Edge Test - " + os);
-                    
-                    logger.info("Attempting to connect to Edge on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
                     break;
 
                 default:
-                    logger.error("No matching browser for remote execution: " + br);
-                    throw new IllegalArgumentException("Unsupported browser: " + br);
+                    throw new IllegalArgumentException("Unsupported browser for remote execution: " + br);
             }
-            
-            logger.info("Successfully connected to Selenium Grid");
-        }
-        else if (p.getProperty("execution_env").equalsIgnoreCase("local")) {
-            // Local execution
-            logger.info("Starting local browser execution...");
-            
+            logger.info("Connected to Selenium Grid successfully.");
+
+        } else if (execEnv.equals("local")) {
+            // -------- Local Execution --------
+            logger.info("Running locally on {}", br);
+            boolean isHeadless = Boolean.parseBoolean(p.getProperty("headless", "false"));
+
             switch (br.toLowerCase()) {
                 case "chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--start-maximized");
-                    chromeOptions.addArguments("--disable-notifications");
-                    chromeOptions.addArguments("--headless=new");
-                    chromeOptions.addArguments("--disable-gpu");
-                    chromeOptions.addArguments("--window-size=1920,1080");
-                    chromeOptions.addArguments("--no-sandbox");
+                    chromeOptions.addArguments("--start-maximized", "--disable-notifications");
+                    if (isHeadless) chromeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
                     driver = new ChromeDriver(chromeOptions);
                     break;
-                    
+
                 case "firefox":
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.addArguments("--headless");
-                    firefoxOptions.addArguments("--width=1920");
-                    firefoxOptions.addArguments("--height=1080");
+                    if (isHeadless) firefoxOptions.addArguments("--headless", "--width=1920", "--height=1080");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
-                    
+
                 case "edge":
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    edgeOptions.addArguments("--headless=new");
-                    edgeOptions.addArguments("--disable-gpu");
-                    edgeOptions.addArguments("--window-size=1920,1080");
-                    edgeOptions.addArguments("--start-maximized");
+                    if (isHeadless) edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
                     driver = new EdgeDriver(edgeOptions);
                     break;
-                    
+
                 default:
-                    logger.error("Invalid browser name for local execution: " + br);
-                    throw new IllegalArgumentException("Unsupported browser: " + br);
+                    throw new IllegalArgumentException("Unsupported browser for local execution: " + br);
             }
-            
-            logger.info("Local browser started successfully");
+            logger.info("Local browser initialized successfully.");
         } else {
-            logger.error("Invalid execution_env in config.properties: " + p.getProperty("execution_env"));
-            throw new IllegalArgumentException("execution_env must be 'local' or 'remote'");
+            throw new IllegalArgumentException("Invalid execution_env value in config.properties: " + execEnv);
         }
 
-        // Common setup for both local and remote
+        // -------- Common Setup --------
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        
-        String appUrl = p.getProperty("appURL2");
-        logger.info("Navigating to: " + appUrl);
+
+        String appUrl = p.getProperty("appURL2", "https://example.com");
         driver.get(appUrl);
         driver.manage().window().maximize();
-        
+
+        logger.info("Navigated to: {}", appUrl);
         logger.info("===== Test Setup Completed =====");
+    }
+
+    private void setPlatform(String os, Object options) {
+        Platform platform;
+        switch (os.toLowerCase()) {
+            case "windows":
+                platform = Platform.WINDOWS;
+                break;
+            case "linux":
+                platform = Platform.LINUX;
+                break;
+            case "mac":
+                platform = Platform.MAC;
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported OS: " + os);
+        }
+        if (options instanceof ChromeOptions)
+            ((ChromeOptions) options).setCapability("platformName", platform);
+        else if (options instanceof FirefoxOptions)
+            ((FirefoxOptions) options).setCapability("platformName", platform);
+        else if (options instanceof EdgeOptions)
+            ((EdgeOptions) options).setCapability("platformName", platform);
     }
 
     @AfterClass(groups = {"Sanity", "Regression", "Master"})
@@ -188,10 +162,11 @@ public class BaseClass {
         if (driver != null) {
             logger.info("Closing browser...");
             driver.quit();
-            logger.info("Browser closed successfully");
+            logger.info("Browser closed successfully.");
         }
     }
 
+    // -------- Utility Methods --------
     public String randomeString() {
         return RandomStringUtils.randomAlphabetic(5);
     }
@@ -201,23 +176,20 @@ public class BaseClass {
     }
 
     public String randomeAlphaNumberic() {
-        String generatedString = RandomStringUtils.randomAlphabetic(3);
-        String generatedNumber = RandomStringUtils.randomNumeric(3);
-        return generatedString + "@" + generatedNumber;
+        return RandomStringUtils.randomAlphabetic(3) + "@" + RandomStringUtils.randomNumeric(3);
     }
 
     public String captureScreen(String tname) throws IOException {
-    	String timeStamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 
-        String targetFilePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + tname + "_" + timeStamp + ".png";
-        File targetFile = new File(targetFilePath);
-        
-        // Create screenshots directory if it doesn't exist
+        String targetDir = System.getProperty("user.dir") + File.separator + "screenshots";
+        File targetFile = new File(targetDir, tname + "_" + timeStamp + ".png");
         targetFile.getParentFile().mkdirs();
-        
-        sourceFile.renameTo(targetFile);
-        return targetFilePath;
+
+        Files.copy(sourceFile.toPath(), targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        logger.info("Screenshot captured: {}", targetFile.getAbsolutePath());
+        return targetFile.getAbsolutePath();
     }
 }
