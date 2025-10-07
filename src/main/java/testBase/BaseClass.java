@@ -75,7 +75,10 @@ public class BaseClass {
                     chromeOptions.addArguments("--disable-notifications");
                     chromeOptions.addArguments("--disable-popup-blocking");
                     chromeOptions.setCapability("se:name", "Remote Chrome Test - " + os);
-                    
+                    chromeOptions.addArguments("--headless=new");
+                    chromeOptions.addArguments("--disable-gpu");
+                    chromeOptions.addArguments("--window-size=1920,1080");
+                    chromeOptions.addArguments("--no-sandbox");
                     logger.info("Attempting to connect to Chrome on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
                     break;
@@ -95,7 +98,9 @@ public class BaseClass {
                     }
                     
                     firefoxOptions.setCapability("se:name", "Remote Firefox Test - " + os);
-                    
+                    firefoxOptions.addArguments("--headless");
+                    firefoxOptions.addArguments("--width=1920");
+                    firefoxOptions.addArguments("--height=1080"); 	
                     logger.info("Attempting to connect to Firefox on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
                     break;
@@ -115,7 +120,10 @@ public class BaseClass {
                     }
                     
                     edgeOptions.setCapability("se:name", "Remote Edge Test - " + os);
-                    
+                    edgeOptions.addArguments("--headless=new");
+                    edgeOptions.addArguments("--disable-gpu");
+                    edgeOptions.addArguments("--window-size=1920,1080");
+                    edgeOptions.addArguments("--start-maximized");
                     logger.info("Attempting to connect to Edge on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
                     break;
@@ -136,16 +144,26 @@ public class BaseClass {
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
                     chromeOptions.addArguments("--disable-notifications");
+                    chromeOptions.addArguments("--headless=new");
+                    chromeOptions.addArguments("--disable-gpu");
+                    chromeOptions.addArguments("--window-size=1920,1080");
+                    chromeOptions.addArguments("--no-sandbox");
                     driver = new ChromeDriver(chromeOptions);
                     break;
                     
                 case "firefox":
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.addArguments("--headless");
+                    firefoxOptions.addArguments("--width=1920");
+                    firefoxOptions.addArguments("--height=1080");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
                     
                 case "edge":
                     EdgeOptions edgeOptions = new EdgeOptions();
+                    edgeOptions.addArguments("--headless=new");
+                    edgeOptions.addArguments("--disable-gpu");
+                    edgeOptions.addArguments("--window-size=1920,1080");
                     edgeOptions.addArguments("--start-maximized");
                     driver = new EdgeDriver(edgeOptions);
                     break;
