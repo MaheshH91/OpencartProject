@@ -76,3 +76,33 @@
 2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
 2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
 2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
+2025-10-07 21:07:30 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
+2025-10-07 21:07:30 INFO  TC_002_LoginTest:49 - Execution Environment: local
+2025-10-07 21:07:30 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
+2025-10-07 21:07:30 INFO  TC_002_LoginTest:131 - Starting local browser execution...
+2025-10-07 21:07:32 INFO  TC_002_LoginTest:167 - Local browser started successfully
+2025-10-07 21:07:32 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
+2025-10-07 21:07:35 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
+2025-10-07 21:07:35 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-07 21:07:45 INFO  TC_002_LoginTest:189 - Closing browser...
+2025-10-07 21:07:45 INFO  TC_002_LoginTest:191 - Browser closed successfully
+2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
+2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
+2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
+2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
+2025-10-07 21:07:46 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
+2025-10-07 21:07:46 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
+2025-10-07 21:07:54 INFO  TC001_AccountRegistrationTest:183 - ===== Test Setup Completed =====
+2025-10-07 21:07:54 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-10-07 21:08:04 ERROR TC001_AccountRegistrationTest:43 - Test failed: element not interactable
+  (Session info: chrome=141.0.7390.55)
+Build info: version: '4.36.0', revision: '6d115cfd87'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [317fe742f4951cdf7748c44e50fd89b2, clickElement {id=f.648071641CD1E10ADB36ACA5D9DA2F0B.d.A208AC29A2DEAFCE885D64A0DB1A738E.e.85}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59129/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (317fe742f4951cdf7748c44e50fd89b2)] -> xpath: //span[text()='My Account']]
+Session ID: 317fe742f4951cdf7748c44e50fd89b2
+2025-10-07 21:08:04 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
+2025-10-07 21:08:05 INFO  TC001_AccountRegistrationTest:189 - Closing browser...
+2025-10-07 21:08:05 INFO  TC001_AccountRegistrationTest:191 - Browser closed successfully

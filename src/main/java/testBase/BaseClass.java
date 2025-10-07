@@ -75,10 +75,6 @@ public class BaseClass {
                     chromeOptions.addArguments("--disable-notifications");
                     chromeOptions.addArguments("--disable-popup-blocking");
                     chromeOptions.setCapability("se:name", "Remote Chrome Test - " + os);
-                    chromeOptions.addArguments("--headless=new");
-                    chromeOptions.addArguments("--disable-gpu");
-                    chromeOptions.addArguments("--window-size=1920,1080");
-                    chromeOptions.addArguments("--no-sandbox");
                     logger.info("Attempting to connect to Chrome on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
                     break;
@@ -98,9 +94,7 @@ public class BaseClass {
                     }
                     
                     firefoxOptions.setCapability("se:name", "Remote Firefox Test - " + os);
-                    firefoxOptions.addArguments("--headless");
-                    firefoxOptions.addArguments("--width=1920");
-                    firefoxOptions.addArguments("--height=1080"); 	
+                    	
                     logger.info("Attempting to connect to Firefox on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
                     break;
@@ -120,10 +114,7 @@ public class BaseClass {
                     }
                     
                     edgeOptions.setCapability("se:name", "Remote Edge Test - " + os);
-                    edgeOptions.addArguments("--headless=new");
-                    edgeOptions.addArguments("--disable-gpu");
-                    edgeOptions.addArguments("--window-size=1920,1080");
-                    edgeOptions.addArguments("--start-maximized");
+                    
                     logger.info("Attempting to connect to Edge on Grid...");
                     driver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
                     break;
@@ -216,7 +207,7 @@ public class BaseClass {
     }
 
     public String captureScreen(String tname) throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+    	String timeStamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 
