@@ -1,0 +1,43 @@
+# Normalize all text files to LF on commit, CRLF on checkout (Windows-friendly)
+* text=auto
+
+# Java source files
+*.java text
+
+# XML config files (TestNG, pom.xml, etc.)
+*.xml text
+
+# Properties files (test data, config)
+*.properties text
+
+# HTML reports (Surefire, Extent, etc.)
+*.html text
+
+# JSON files (if used for test data or config)
+*.json text
+
+# CSV files (for DDF test data)
+*.csv text
+
+# Markdown or documentation
+*.md text
+
+# Ignore binary files (e.g., screenshots, logs)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.log binary
+
+# Ignore compiled class files
+*.class binary
+
+# Ignore IDE-specific files
+*.iml text
+*.idea/* text
+*.classpath text
+*.project text
+
+# Ignore OS-specific files
+*.DS_Store binary
+Thumbs.db binary
