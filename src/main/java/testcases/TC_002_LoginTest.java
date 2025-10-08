@@ -29,7 +29,7 @@ public class TC_002_LoginTest extends BaseClass {
 			boolean target = macc.isEditYourAccountInfoLinkDisplayed();
 //			System.out.println(target);
 //			Assert.assertTrue(target);
-			Assert.assertTrue(macc.isEditYourAccountInfoLinkDisplayed(),
+			Assert.assertTrue(target,
 					"Edit your account information is not displayed.");
 		} catch (Exception e) {
 
