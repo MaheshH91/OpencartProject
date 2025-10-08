@@ -34,7 +34,8 @@ import org.testng.annotations.Parameters;
 public class BaseClass {
 
     public static WebDriver driver;
-    public Logger logger;
+    public static Logger logger = LogManager.getLogger(BaseClass.class);
+
     public Properties p;
 
     @BeforeClass(groups = {"Sanity", "Regression", "Master"})

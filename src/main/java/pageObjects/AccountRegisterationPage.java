@@ -1,13 +1,20 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AccountRegisterationPage extends BasePage {
+	private WebDriverWait wait;
 
     public AccountRegisterationPage(WebDriver driver) {
         super(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
     }
 
     @FindBy(xpath = "//input[@id='input-firstname']")
@@ -39,42 +46,43 @@ public class AccountRegisterationPage extends BasePage {
 
     // REMOVED DUPLICATE METHODS - Keep only one set
     public void setFirstName(String fName) {
-        txtFirstname.sendKeys(fName);
+        wait.until(ExpectedConditions.visibilityOf(txtFirstname)).sendKeys(fName);
     }
-    
+
     public void setLastName(String lName) {
-        txtLastname.sendKeys(lName);
+        wait.until(ExpectedConditions.visibilityOf(txtLastname)).sendKeys(lName);
     }
-    
+
     public void setEmail(String emailId) {
-        txtEmail.sendKeys(emailId);
+        wait.until(ExpectedConditions.visibilityOf(txtEmail)).sendKeys(emailId);
     }
-    
-    public void setTelephone(String telNumber) {  // Fixed parameter name
-        txtTelephone.sendKeys(telNumber);
+
+    public void setTelephone(String telNumber) {
+        wait.until(ExpectedConditions.visibilityOf(txtTelephone)).sendKeys(telNumber);
     }
-    
+
     public void setPassord(String pwd) {
-        txtPassword.sendKeys(pwd);
+        wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys(pwd);
     }
-    
+
     public void setConfirmPassord(String pwd) {
-        txtConfirmPassword.sendKeys(pwd);
+        wait.until(ExpectedConditions.visibilityOf(txtConfirmPassword)).sendKeys(pwd);
     }
-    
+
     public void setPrivacyPolicy() {
-        chkPolicy.click();
+        wait.until(ExpectedConditions.elementToBeClickable(chkPolicy)).click();
     }
-    
+
     public void clickContinue() {
-        btnContinue.click();
+        wait.until(ExpectedConditions.elementToBeClickable(btnContinue)).click();
     }
-    
+
     public String getConfirmationMsg() {
         try {
-            return msgConfirmation.getText();
+            return wait.until(ExpectedConditions.visibilityOf(msgConfirmation)).getText();
         } catch (Exception e) {
             return e.getMessage();
         }
+
     }
 }
