@@ -1,0 +1,3 @@
+# Created at 2025-10-08T10:11:48.658
+Cannot invoke "org.apache.logging.log4j.Logger.info(String, Object)" because "this.logger" is null
+
