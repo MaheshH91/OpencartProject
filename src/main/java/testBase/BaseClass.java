@@ -24,6 +24,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -53,70 +54,57 @@ public class BaseClass {
         logger.info("Execution Environment: {}", p.getProperty("execution_env"));
         logger.info("OS: {}, Browser: {}", os, br);
 
-        String execEnv = p.getProperty("execution_env", "local").toLowerCase();
+        String execEnv = p.getProperty("execution_env").toLowerCase();
 
-        if (execEnv.equals("remote")) {
+        if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
             // -------- Remote Execution --------
-            String gridUrl = p.getProperty("grid.url", "http://localhost:4444/wd/hub");
-            logger.info("Running on Selenium Grid: {}", gridUrl);
+DesiredCapabilities capabilities=new DesiredCapabilities();
+			
+			//os
+			if(os.equalsIgnoreCase("windows"))
+			{
+				capabilities.setPlatform(Platform.WIN11);
+			}
+			else if(os.equalsIgnoreCase("linux"))
+			{
+				capabilities.setPlatform(Platform.LINUX);
+				
+			}
+			else if (os.equalsIgnoreCase("mac"))
+			{
+				capabilities.setPlatform(Platform.MAC);
+			}
+			else
+			{
+				System.out.println("No matching os");
+				return;
+			}
+			
+			//browser
+			switch(br.toLowerCase())
+			{
+			case "chrome": capabilities.setBrowserName("chrome"); break;
+			case "edge": capabilities.setBrowserName("MicrosoftEdge"); break;
+			case "firefox": capabilities.setBrowserName("firefox"); break;
+			default: System.out.println("No matching browser"); return;
+			}
+			
+			driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+            
 
-            switch (br.toLowerCase()) {
-                case "chrome":
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    setPlatform(os, chromeOptions);
-                    chromeOptions.addArguments("--start-maximized", "--disable-notifications", "--disable-popup-blocking");
-                    chromeOptions.setCapability("se:name", "Remote Chrome Test - " + os);
-                    driver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
-                    break;
-
-                case "firefox":
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    setPlatform(os, firefoxOptions);
-                    firefoxOptions.setCapability("se:name", "Remote Firefox Test - " + os);
-                    driver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
-                    break;
-
-                case "edge":
-                    EdgeOptions edgeOptions = new EdgeOptions();
-                    setPlatform(os, edgeOptions);
-                    edgeOptions.setCapability("se:name", "Remote Edge Test - " + os);
-                    driver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
-                    break;
-
-                default:
-                    throw new IllegalArgumentException("Unsupported browser for remote execution: " + br);
-            }
-            logger.info("Connected to Selenium Grid successfully.");
-
-        } else if (execEnv.equals("local")) {
+        } else if ((p.getProperty("execution_env"))
+        		.equalsIgnoreCase("local"))
+        		{
             // -------- Local Execution --------
             logger.info("Running locally on {}", br);
-            boolean isHeadless = Boolean.parseBoolean(p.getProperty("headless", "false"));
 
-            switch (br.toLowerCase()) {
-                case "chrome":
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--start-maximized", "--disable-notifications");
-                    if (isHeadless) chromeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
-                    driver = new ChromeDriver(chromeOptions);
-                    break;
-
-                case "firefox":
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    if (isHeadless) firefoxOptions.addArguments("--headless", "--width=1920", "--height=1080");
-                    driver = new FirefoxDriver(firefoxOptions);
-                    break;
-
-                case "edge":
-                    EdgeOptions edgeOptions = new EdgeOptions();
-                    if (isHeadless) edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
-                    driver = new EdgeDriver(edgeOptions);
-                    break;
-
-                default:
-                    throw new IllegalArgumentException("Unsupported browser for local execution: " + br);
-            }
-            logger.info("Local browser initialized successfully.");
+            switch(br.toLowerCase())
+			{
+			case "chrome" : driver=new ChromeDriver(); break;
+			case "edge" : driver=new EdgeDriver(); break;
+			case "firefox": driver=new FirefoxDriver(); break;
+			default : System.out.println("Invalid browser name.."); return;
+			}            logger.info("Local browser initialized successfully.");
         } else {
             throw new IllegalArgumentException("Invalid execution_env value in config.properties: " + execEnv);
         }
