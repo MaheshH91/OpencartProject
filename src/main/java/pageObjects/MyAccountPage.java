@@ -10,7 +10,9 @@ public class MyAccountPage extends BasePage {
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
 	}
-
+	@FindBy(linkText = "Edit your account information")
+	private WebElement editYourAccountInfoLink;
+	
 	@FindBy(xpath = "//h2[text()='My Account']")
 	private WebElement msgHeading;
 	
@@ -23,6 +25,15 @@ public class MyAccountPage extends BasePage {
 		} catch (Exception e) {
 			return false;
 		}	
+	}
+	public boolean isElementDisplayed(WebElement element) {
+		return element.isDisplayed();
+	}
+
+	
+
+	public boolean isEditYourAccountInfoLinkDisplayed() {
+		return isElementDisplayed(editYourAccountInfoLink);
 	}
 	
 	public void clickLogout() {

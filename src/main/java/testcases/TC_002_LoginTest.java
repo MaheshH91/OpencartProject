@@ -25,10 +25,12 @@ public class TC_002_LoginTest extends BaseClass {
 
 			MyAccountPage macc = new MyAccountPage(driver);
 
-			boolean target = macc.isMyAccountPageIsExist();
+//			boolean target = macc.isMyAccountPageIsExist();
+			boolean target = macc.isEditYourAccountInfoLinkDisplayed();
 //			System.out.println(target);
 //			Assert.assertTrue(target);
-		Assert.assertEquals(target, true, "Login Failed");
+			Assert.assertTrue(macc.isEditYourAccountInfoLinkDisplayed(),
+					"Edit your account information is not displayed.");
 		} catch (Exception e) {
 
 			Assert.fail();
