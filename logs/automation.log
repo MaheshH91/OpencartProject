@@ -1,238 +1,88 @@
-2025-10-07 15:43:57 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 15:43:57 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 15:43:57 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 15:43:57 INFO  TC_002_LoginTest:132 - Starting local browser execution...
-2025-10-07 15:44:05 INFO  TC_002_LoginTest:158 - Local browser started successfully
-2025-10-07 15:44:06 INFO  TC_002_LoginTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 15:44:07 INFO  TC_002_LoginTest:174 - ===== Test Setup Completed =====
-2025-10-07 15:44:07 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 15:44:10 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
-2025-10-07 15:44:10 INFO  TC_002_LoginTest:180 - Closing browser...
-2025-10-07 15:44:11 INFO  TC_002_LoginTest:182 - Browser closed successfully
-2025-10-07 15:44:11 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 15:44:11 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 15:44:11 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 15:44:11 INFO  TC001_AccountRegistrationTest:132 - Starting local browser execution...
-2025-10-07 15:44:14 INFO  TC001_AccountRegistrationTest:158 - Local browser started successfully
-2025-10-07 15:44:14 INFO  TC001_AccountRegistrationTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 15:44:15 INFO  TC001_AccountRegistrationTest:174 - ===== Test Setup Completed =====
-2025-10-07 15:44:15 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 15:44:16 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
-2025-10-07 15:44:16 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
-2025-10-07 15:44:19 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
-2025-10-07 15:44:19 INFO  TC001_AccountRegistrationTest:41 - Test passed
-2025-10-07 15:44:19 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 15:44:19 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
-2025-10-07 15:44:20 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
-2025-10-07 15:49:51 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 15:49:51 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 15:49:51 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 15:49:51 INFO  TC_002_LoginTest:132 - Starting local browser execution...
-2025-10-07 15:49:55 INFO  TC_002_LoginTest:158 - Local browser started successfully
-2025-10-07 15:49:55 INFO  TC_002_LoginTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 15:49:56 INFO  TC_002_LoginTest:174 - ===== Test Setup Completed =====
-2025-10-07 15:49:56 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 15:49:59 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
-2025-10-07 15:49:59 INFO  TC_002_LoginTest:180 - Closing browser...
-2025-10-07 15:50:00 INFO  TC_002_LoginTest:182 - Browser closed successfully
-2025-10-07 15:50:00 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 15:50:00 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 15:50:00 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 15:50:00 INFO  TC001_AccountRegistrationTest:132 - Starting local browser execution...
-2025-10-07 15:50:02 INFO  TC001_AccountRegistrationTest:158 - Local browser started successfully
-2025-10-07 15:50:02 INFO  TC001_AccountRegistrationTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 15:50:05 INFO  TC001_AccountRegistrationTest:174 - ===== Test Setup Completed =====
-2025-10-07 15:50:05 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 15:50:06 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
-2025-10-07 15:50:06 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
-2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
-2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:41 - Test passed
-2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 15:50:08 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
-2025-10-07 15:50:09 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
-2025-10-07 20:22:49 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 20:22:49 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 20:22:49 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 20:22:49 INFO  TC_002_LoginTest:132 - Starting local browser execution...
-2025-10-07 20:23:04 INFO  TC_002_LoginTest:158 - Local browser started successfully
-2025-10-07 20:23:04 INFO  TC_002_LoginTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 20:23:14 INFO  TC_002_LoginTest:174 - ===== Test Setup Completed =====
-2025-10-07 20:23:14 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 20:23:16 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
-2025-10-07 20:23:16 INFO  TC_002_LoginTest:180 - Closing browser...
-2025-10-07 20:23:17 INFO  TC_002_LoginTest:182 - Browser closed successfully
-2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 20:23:17 INFO  TC001_AccountRegistrationTest:132 - Starting local browser execution...
-2025-10-07 20:23:20 INFO  TC001_AccountRegistrationTest:158 - Local browser started successfully
-2025-10-07 20:23:20 INFO  TC001_AccountRegistrationTest:170 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 20:23:23 INFO  TC001_AccountRegistrationTest:174 - ===== Test Setup Completed =====
-2025-10-07 20:23:23 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 20:23:24 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
-2025-10-07 20:23:24 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
-2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
-2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:41 - Test passed
-2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:180 - Closing browser...
-2025-10-07 20:23:27 INFO  TC001_AccountRegistrationTest:182 - Browser closed successfully
-2025-10-07 21:07:30 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:07:30 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 21:07:30 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:07:30 INFO  TC_002_LoginTest:131 - Starting local browser execution...
-2025-10-07 21:07:32 INFO  TC_002_LoginTest:167 - Local browser started successfully
-2025-10-07 21:07:32 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:07:35 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:07:35 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 21:07:45 INFO  TC_002_LoginTest:189 - Closing browser...
-2025-10-07 21:07:45 INFO  TC_002_LoginTest:191 - Browser closed successfully
-2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:07:45 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
-2025-10-07 21:07:46 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
-2025-10-07 21:07:46 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:07:54 INFO  TC001_AccountRegistrationTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:07:54 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 21:08:04 ERROR TC001_AccountRegistrationTest:43 - Test failed: element not interactable
-  (Session info: chrome=141.0.7390.55)
-Build info: version: '4.36.0', revision: '6d115cfd87'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [317fe742f4951cdf7748c44e50fd89b2, clickElement {id=f.648071641CD1E10ADB36ACA5D9DA2F0B.d.A208AC29A2DEAFCE885D64A0DB1A738E.e.85}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59129/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (317fe742f4951cdf7748c44e50fd89b2)] -> xpath: //span[text()='My Account']]
-Session ID: 317fe742f4951cdf7748c44e50fd89b2
-2025-10-07 21:08:04 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 21:08:05 INFO  TC001_AccountRegistrationTest:189 - Closing browser...
-2025-10-07 21:08:05 INFO  TC001_AccountRegistrationTest:191 - Browser closed successfully
-2025-10-07 21:42:48 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:42:48 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 21:42:48 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:42:48 INFO  TC_002_LoginTest:131 - Starting local browser execution...
-2025-10-07 21:43:05 INFO  TC_002_LoginTest:167 - Local browser started successfully
-2025-10-07 21:43:05 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:43:10 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:43:10 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 21:43:20 INFO  TC_002_LoginTest:189 - Closing browser...
-2025-10-07 21:43:20 INFO  TC_002_LoginTest:191 - Browser closed successfully
-2025-10-07 21:43:20 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:43:20 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 21:43:20 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:43:20 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
-2025-10-07 21:43:21 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
-2025-10-07 21:43:21 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:45:14 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:45:14 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 21:45:14 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:45:14 INFO  TC_002_LoginTest:131 - Starting local browser execution...
-2025-10-07 21:45:15 INFO  TC_002_LoginTest:167 - Local browser started successfully
-2025-10-07 21:45:15 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:45:18 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:45:18 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 21:45:28 INFO  TC_002_LoginTest:189 - Closing browser...
-2025-10-07 21:45:28 INFO  TC_002_LoginTest:191 - Browser closed successfully
-2025-10-07 21:45:28 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:45:28 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 21:45:28 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:45:28 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
-2025-10-07 21:45:29 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
-2025-10-07 21:45:29 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:53:59 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:53:59 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 21:53:59 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:53:59 INFO  TC_002_LoginTest:131 - Starting local browser execution...
-2025-10-07 21:54:02 INFO  TC_002_LoginTest:167 - Local browser started successfully
-2025-10-07 21:54:02 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:54:04 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:54:04 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 21:54:15 INFO  TC_002_LoginTest:189 - Closing browser...
-2025-10-07 21:54:15 INFO  TC_002_LoginTest:191 - Browser closed successfully
-2025-10-07 21:54:15 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:54:15 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 21:54:15 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:54:15 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
-2025-10-07 21:54:16 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
-2025-10-07 21:54:16 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:54:19 INFO  TC001_AccountRegistrationTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:54:19 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 21:54:29 ERROR TC001_AccountRegistrationTest:43 - Test failed: element not interactable
-  (Session info: chrome=141.0.7390.55)
-Build info: version: '4.36.0', revision: '6d115cfd87'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bf4fae98650016e527fb7f1164c3fde6, clickElement {id=f.A969CB659E90EC30CB12E5CC064C20A5.d.D946FCD860DA57EEAE48CEF5662D898C.e.85}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65220}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65220/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bf4fae98650016e527fb7f1164c3fde6)] -> xpath: //span[text()='My Account']]
-Session ID: bf4fae98650016e527fb7f1164c3fde6
-2025-10-07 21:54:29 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 21:54:29 INFO  TC001_AccountRegistrationTest:189 - Closing browser...
-2025-10-07 21:54:29 INFO  TC001_AccountRegistrationTest:191 - Browser closed successfully
-2025-10-07 21:57:52 INFO  TC_002_LoginTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:57:52 INFO  TC_002_LoginTest:49 - Execution Environment: local
-2025-10-07 21:57:52 INFO  TC_002_LoginTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:57:52 INFO  TC_002_LoginTest:131 - Starting local browser execution...
-2025-10-07 21:57:55 INFO  TC_002_LoginTest:167 - Local browser started successfully
-2025-10-07 21:57:55 INFO  TC_002_LoginTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 21:57:58 INFO  TC_002_LoginTest:183 - ===== Test Setup Completed =====
-2025-10-07 21:57:58 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 21:58:08 INFO  TC_002_LoginTest:189 - Closing browser...
-2025-10-07 21:58:09 INFO  TC_002_LoginTest:191 - Browser closed successfully
-2025-10-07 21:58:09 INFO  TC001_AccountRegistrationTest:48 - ===== Starting Test Setup =====
-2025-10-07 21:58:09 INFO  TC001_AccountRegistrationTest:49 - Execution Environment: local
-2025-10-07 21:58:09 INFO  TC001_AccountRegistrationTest:50 - OS: Windows, Browser: chrome
-2025-10-07 21:58:09 INFO  TC001_AccountRegistrationTest:131 - Starting local browser execution...
-2025-10-07 21:58:11 INFO  TC001_AccountRegistrationTest:167 - Local browser started successfully
-2025-10-07 21:58:11 INFO  TC001_AccountRegistrationTest:179 - Navigating to: https://tutorialsninja.com/demo/
-2025-10-07 22:12:52 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
-2025-10-07 22:12:52 INFO  TC_002_LoginTest:53 - Execution Environment: local
-2025-10-07 22:12:52 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
-2025-10-07 22:12:52 INFO  TC_002_LoginTest:93 - Running locally on chrome
-2025-10-07 22:12:56 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
-2025-10-07 22:12:59 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-07 22:12:59 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
-2025-10-07 22:12:59 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 22:13:02 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
-2025-10-07 22:13:02 INFO  TC_002_LoginTest:163 - Closing browser...
-2025-10-07 22:13:02 INFO  TC_002_LoginTest:165 - Browser closed successfully.
-2025-10-07 22:13:02 INFO  TC001_AccountRegistrationTest:52 - ===== Starting Test Setup =====
-2025-10-07 22:13:02 INFO  TC001_AccountRegistrationTest:53 - Execution Environment: local
-2025-10-07 22:13:02 INFO  TC001_AccountRegistrationTest:54 - OS: Windows, Browser: chrome
-2025-10-07 22:13:02 INFO  TC001_AccountRegistrationTest:93 - Running locally on chrome
-2025-10-07 22:13:04 INFO  TC001_AccountRegistrationTest:119 - Local browser initialized successfully.
-2025-10-07 22:13:06 INFO  TC001_AccountRegistrationTest:133 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-07 22:13:06 INFO  TC001_AccountRegistrationTest:134 - ===== Test Setup Completed =====
-2025-10-07 22:13:06 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 22:13:07 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
-2025-10-07 22:13:07 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
-2025-10-07 22:13:09 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
-2025-10-07 22:13:09 INFO  TC001_AccountRegistrationTest:41 - Test passed
-2025-10-07 22:13:09 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 22:13:09 INFO  TC001_AccountRegistrationTest:163 - Closing browser...
-2025-10-07 22:13:09 INFO  TC001_AccountRegistrationTest:165 - Browser closed successfully.
-2025-10-07 22:26:09 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
-2025-10-07 22:26:09 INFO  TC_002_LoginTest:53 - Execution Environment: local
-2025-10-07 22:26:09 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
-2025-10-07 22:26:09 INFO  TC_002_LoginTest:93 - Running locally on chrome
-2025-10-07 22:26:12 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
-2025-10-07 22:26:14 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-07 22:26:14 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
-2025-10-07 22:26:14 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
-2025-10-07 22:26:17 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
-2025-10-07 22:26:17 INFO  TC_002_LoginTest:163 - Closing browser...
-2025-10-07 22:26:17 INFO  TC_002_LoginTest:165 - Browser closed successfully.
-2025-10-07 22:26:17 INFO  TC001_AccountRegistrationTest:52 - ===== Starting Test Setup =====
-2025-10-07 22:26:17 INFO  TC001_AccountRegistrationTest:53 - Execution Environment: local
-2025-10-07 22:26:17 INFO  TC001_AccountRegistrationTest:54 - OS: Windows, Browser: chrome
-2025-10-07 22:26:17 INFO  TC001_AccountRegistrationTest:93 - Running locally on chrome
-2025-10-07 22:26:19 INFO  TC001_AccountRegistrationTest:119 - Local browser initialized successfully.
-2025-10-07 22:26:25 INFO  TC001_AccountRegistrationTest:133 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-07 22:26:25 INFO  TC001_AccountRegistrationTest:134 - ===== Test Setup Completed =====
-2025-10-07 22:26:25 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-10-07 22:26:26 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
-2025-10-07 22:26:26 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
-2025-10-07 22:26:29 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
-2025-10-07 22:26:29 INFO  TC001_AccountRegistrationTest:41 - Test passed
-2025-10-07 22:26:29 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-07 22:26:29 INFO  TC001_AccountRegistrationTest:163 - Closing browser...
-2025-10-07 22:26:29 INFO  TC001_AccountRegistrationTest:165 - Browser closed successfully.
+2025-10-08 06:38:51 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:38:51 INFO  TC_002_LoginTest:53 - Execution Environment: local
+2025-10-08 06:38:51 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:38:51 INFO  TC_002_LoginTest:93 - Running locally on chrome
+2025-10-08 06:40:11 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
+2025-10-08 06:40:13 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:40:13 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:40:13 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-08 06:40:24 INFO  TC_002_LoginTest:163 - Closing browser...
+2025-10-08 06:40:24 INFO  TC_002_LoginTest:165 - Browser closed successfully.
+2025-10-08 06:41:43 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:41:43 INFO  TC_002_LoginTest:53 - Execution Environment: local
+2025-10-08 06:41:43 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:41:43 INFO  TC_002_LoginTest:93 - Running locally on chrome
+2025-10-08 06:41:51 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
+2025-10-08 06:41:53 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:41:53 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:41:53 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-08 06:41:55 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
+2025-10-08 06:41:56 INFO  TC_002_LoginTest:163 - Closing browser...
+2025-10-08 06:41:56 INFO  TC_002_LoginTest:165 - Browser closed successfully.
+2025-10-08 06:41:56 INFO  TC001_AccountRegistrationTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:41:56 INFO  TC001_AccountRegistrationTest:53 - Execution Environment: local
+2025-10-08 06:41:56 INFO  TC001_AccountRegistrationTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:41:56 INFO  TC001_AccountRegistrationTest:93 - Running locally on chrome
+2025-10-08 06:41:57 INFO  TC001_AccountRegistrationTest:119 - Local browser initialized successfully.
+2025-10-08 06:41:58 INFO  TC001_AccountRegistrationTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:41:58 INFO  TC001_AccountRegistrationTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:41:58 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-10-08 06:41:59 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
+2025-10-08 06:41:59 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
+2025-10-08 06:42:01 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
+2025-10-08 06:42:01 INFO  TC001_AccountRegistrationTest:41 - Test passed
+2025-10-08 06:42:01 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
+2025-10-08 06:42:01 INFO  TC001_AccountRegistrationTest:163 - Closing browser...
+2025-10-08 06:42:01 INFO  TC001_AccountRegistrationTest:165 - Browser closed successfully.
+2025-10-08 06:44:39 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:44:39 INFO  TC_002_LoginTest:53 - Execution Environment: local
+2025-10-08 06:44:39 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:44:39 INFO  TC_002_LoginTest:93 - Running locally on chrome
+2025-10-08 06:44:43 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
+2025-10-08 06:44:45 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:44:45 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:44:45 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-08 06:44:47 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
+2025-10-08 06:44:47 INFO  TC_002_LoginTest:163 - Closing browser...
+2025-10-08 06:44:48 INFO  TC_002_LoginTest:165 - Browser closed successfully.
+2025-10-08 06:44:48 INFO  TC001_AccountRegistrationTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:44:48 INFO  TC001_AccountRegistrationTest:53 - Execution Environment: local
+2025-10-08 06:44:48 INFO  TC001_AccountRegistrationTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:44:48 INFO  TC001_AccountRegistrationTest:93 - Running locally on chrome
+2025-10-08 06:44:51 INFO  TC001_AccountRegistrationTest:119 - Local browser initialized successfully.
+2025-10-08 06:44:52 INFO  TC001_AccountRegistrationTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:44:52 INFO  TC001_AccountRegistrationTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:44:52 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-10-08 06:44:53 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
+2025-10-08 06:44:53 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
+2025-10-08 06:44:55 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
+2025-10-08 06:44:55 INFO  TC001_AccountRegistrationTest:41 - Test passed
+2025-10-08 06:44:55 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
+2025-10-08 06:44:55 INFO  TC001_AccountRegistrationTest:163 - Closing browser...
+2025-10-08 06:44:55 INFO  TC001_AccountRegistrationTest:165 - Browser closed successfully.
+2025-10-08 06:53:08 INFO  TC_002_LoginTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:53:08 INFO  TC_002_LoginTest:53 - Execution Environment: local
+2025-10-08 06:53:08 INFO  TC_002_LoginTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:53:08 INFO  TC_002_LoginTest:93 - Running locally on chrome
+2025-10-08 06:53:14 INFO  TC_002_LoginTest:119 - Local browser initialized successfully.
+2025-10-08 06:53:15 INFO  TC_002_LoginTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:53:15 INFO  TC_002_LoginTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:53:15 INFO  TC_002_LoginTest:16 - *********** Starting TC_002_LoginTest **********
+2025-10-08 06:53:18 INFO  TC_002_LoginTest:37 - ********* Finished TC_002_LoginTest ***********
+2025-10-08 06:53:18 INFO  TC_002_LoginTest:163 - Closing browser...
+2025-10-08 06:53:19 INFO  TC_002_LoginTest:165 - Browser closed successfully.
+2025-10-08 06:53:19 INFO  TC001_AccountRegistrationTest:52 - ===== Starting Test Setup =====
+2025-10-08 06:53:19 INFO  TC001_AccountRegistrationTest:53 - Execution Environment: local
+2025-10-08 06:53:19 INFO  TC001_AccountRegistrationTest:54 - OS: Windows, Browser: chrome
+2025-10-08 06:53:19 INFO  TC001_AccountRegistrationTest:93 - Running locally on chrome
+2025-10-08 06:53:21 INFO  TC001_AccountRegistrationTest:119 - Local browser initialized successfully.
+2025-10-08 06:53:23 INFO  TC001_AccountRegistrationTest:133 - Navigated to: https://tutorialsninja.com/demo/
+2025-10-08 06:53:23 INFO  TC001_AccountRegistrationTest:134 - ===== Test Setup Completed =====
+2025-10-08 06:53:23 INFO  TC001_AccountRegistrationTest:15 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-10-08 06:53:26 INFO  TC001_AccountRegistrationTest:21 - Clicked on Register Link.. 
+2025-10-08 06:53:26 INFO  TC001_AccountRegistrationTest:25 - Providing customer details...
+2025-10-08 06:53:29 INFO  TC001_AccountRegistrationTest:37 - Validating expected message..
+2025-10-08 06:53:29 INFO  TC001_AccountRegistrationTest:41 - Test passed
+2025-10-08 06:53:29 INFO  TC001_AccountRegistrationTest:46 - ***** Finished TC001_AccountRegistrationTest *****
+2025-10-08 06:53:29 INFO  TC001_AccountRegistrationTest:163 - Closing browser...
+2025-10-08 06:53:31 INFO  TC001_AccountRegistrationTest:165 - Browser closed successfully.

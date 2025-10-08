@@ -9,6 +9,7 @@ import pageObjects.MyAccountPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
+
 public class TC003_LoginDDT_Test extends BaseClass {
 
 	@Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class, groups = "Datadriven")
@@ -27,7 +28,7 @@ public class TC003_LoginDDT_Test extends BaseClass {
 			MyAccountPage macc = new MyAccountPage(driver);
 
 			boolean target = macc.isMyAccountPageIsExist();
-			System.out.println(target);
+			//System.out.println(target);
 			/*
 			 * Data is valid - login success - test pass login failed - test fail
 			 * 
