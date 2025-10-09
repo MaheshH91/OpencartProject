@@ -13,7 +13,7 @@ public class AccountRegisterationPage extends BasePage {
 
     public AccountRegisterationPage(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
     }
 
