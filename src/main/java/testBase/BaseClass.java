@@ -112,12 +112,12 @@ DesiredCapabilities capabilities=new DesiredCapabilities();
 
         // -------- Common Setup --------
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-
+        driver.manage().window().maximize();
         String appUrl = p.getProperty("appURL2", "https://example.com");
         driver.get(appUrl);
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
 
         logger.info("Navigated to: {}", appUrl);
         logger.info("===== Test Setup Completed =====");
