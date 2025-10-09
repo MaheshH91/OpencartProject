@@ -13,7 +13,7 @@ public class HomePage extends BasePage {
 		super(driver);
 	}
 
-	@FindBy(xpath = "//span[normalize-space()='My Account']")
+	@FindBy(xpath = "//a[@title='My Account']")
 	private WebElement lnkMyAccount;
 
 	@FindBy(xpath = "//a[normalize-space()='Register']")
