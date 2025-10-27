@@ -1,6 +1,7 @@
 name: OpenCart Selenium Java CI with Maven
-
 on:
+  workflow_dispatch:
+#on:
   push:
     branches: [ "master" ]
   pull_request:
