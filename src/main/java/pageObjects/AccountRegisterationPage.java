@@ -1,88 +1,35 @@
 package pageObjects;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.*;
 
-public class AccountRegisterationPage extends BasePage {
-	private WebDriverWait wait;
+public class AccountRegisterationPage {
+    WebDriver driver;
+
+    @FindBy(id="input-firstname") WebElement txtFirstName;
+    @FindBy(id="input-lastname") WebElement txtLastName;
+    @FindBy(id="input-email") WebElement txtEmail;
+    @FindBy(id="input-telephone") WebElement txtTelephone;
+    @FindBy(id="input-password") WebElement txtPassword;
+    @FindBy(id="input-confirm") WebElement txtConfirmPassword;
+    @FindBy(name="agree") WebElement chkPrivacyPolicy;
+    @FindBy(xpath="//input[@value='Continue']") WebElement btnContinue;
+    @FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
+    WebElement msgConfirmation;
 
     public AccountRegisterationPage(WebDriver driver) {
-        super(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@id='input-firstname']")
-    private WebElement txtFirstname;
-
-    @FindBy(xpath = "//input[@id='input-lastname']")	
-    private WebElement txtLastname;  
-    
-    @FindBy(xpath = "//input[@id='input-email']")
-    private WebElement txtEmail;
-    
-    @FindBy(xpath = "//input[@id='input-telephone']")
-    private WebElement txtTelephone;
-
-    @FindBy(xpath = "//input[@id='input-password']")
-    private WebElement txtPassword;
-
-    @FindBy(xpath = "//input[@id='input-confirm']")
-    private WebElement txtConfirmPassword;
-    
-    @FindBy(xpath = "//input[@name= 'agree']")
-    private WebElement chkPolicy;
-
-    @FindBy(xpath = "//input[@value='Continue']")
-    private WebElement btnContinue;
-
-    @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
-    private WebElement msgConfirmation;
-
-    // REMOVED DUPLICATE METHODS - Keep only one set
-    public void setFirstName(String fName) {
-        wait.until(ExpectedConditions.visibilityOf(txtFirstname)).sendKeys(fName);
-    }
-
-    public void setLastName(String lName) {
-        wait.until(ExpectedConditions.visibilityOf(txtLastname)).sendKeys(lName);
-    }
-
-    public void setEmail(String emailId) {
-        wait.until(ExpectedConditions.visibilityOf(txtEmail)).sendKeys(emailId);
-    }
-
-    public void setTelephone(String telNumber) {
-        wait.until(ExpectedConditions.visibilityOf(txtTelephone)).sendKeys(telNumber);
-    }
-
-    public void setPassord(String pwd) {
-        wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys(pwd);
-    }
-
-    public void setConfirmPassord(String pwd) {
-        wait.until(ExpectedConditions.visibilityOf(txtConfirmPassword)).sendKeys(pwd);
-    }
-
-    public void setPrivacyPolicy() {
-        wait.until(ExpectedConditions.elementToBeClickable(chkPolicy)).click();
-    }
-
-    public void clickContinue() {
-        wait.until(ExpectedConditions.elementToBeClickable(btnContinue)).click();
-    }
-
-    public String getConfirmationMsg() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(msgConfirmation)).getText();
-        } catch (Exception e) {
-            return e.getMessage();
-        }
-
-    }
+    public void setFirstName(String fname) { txtFirstName.sendKeys(fname); }
+    public void setLastName(String lname) { txtLastName.sendKeys(lname); }
+    public void setEmail(String email) { txtEmail.sendKeys(email); }
+    public void setTelephone(String tel) { txtTelephone.sendKeys(tel); }
+    public void setPassord(String pwd) { txtPassword.sendKeys(pwd); }
+    public void setConfirmPassord(String pwd) { txtConfirmPassword.sendKeys(pwd); }
+    public void setPrivacyPolicy() { chkPrivacyPolicy.click(); }
+    public void clickContinue() { btnContinue.click(); }
+    public String getConfirmationMsg() { return msgConfirmation.getText(); }
 }

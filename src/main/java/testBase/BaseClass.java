@@ -14,171 +14,76 @@ import java.util.Properties;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
+
+import factory.DriverFactory;
 
 public class BaseClass {
 
-    public static WebDriver driver;
     public static Logger logger = LogManager.getLogger(BaseClass.class);
+    public static Properties p;
+    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public Properties p;
-
-    @BeforeClass(groups = {"Sanity", "Regression", "Master"})
+    @BeforeClass(alwaysRun = true)
     @Parameters({"os", "browser"})
-    public void setup(@Optional("windows") String os, @Optional("chrome") String br) throws IOException {
+    public void setup(@Optional("windows") String os, @Optional("chrome") String browser) throws IOException {
 
         // Load config.properties
-        String configPath = System.getProperty("user.dir") + File.separator + "src" + File.separator
-                + "test" + File.separator + "resources" + File.separator + "config.properties";
-        FileReader file = new FileReader(configPath);
+        String configPath = System.getProperty("user.dir") + "/src/test/resources/config.properties";
         p = new Properties();
-        p.load(file);
-        file.close();
-
-        logger = LogManager.getLogger(this.getClass());
-        logger.info("===== Starting Test Setup =====");
-        logger.info("Execution Environment: {}", p.getProperty("execution_env"));
-        logger.info("OS: {}, Browser: {}", os, br);
+        p.load(new FileReader(configPath));
 
         String execEnv = p.getProperty("execution_env").toLowerCase();
 
-        if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
-            // -------- Remote Execution --------
-DesiredCapabilities capabilities=new DesiredCapabilities();
-			
-			//os
-			if(os.equalsIgnoreCase("windows"))
-			{
-				capabilities.setPlatform(Platform.WIN11);
-			}
-			else if(os.equalsIgnoreCase("linux"))
-			{
-				capabilities.setPlatform(Platform.LINUX);
-				
-			}
-			else if (os.equalsIgnoreCase("mac"))
-			{
-				capabilities.setPlatform(Platform.MAC);
-			}
-			else
-			{
-				System.out.println("No matching os");
-				return;
-			}
-			
-			//browser
-			switch(br.toLowerCase())
-			{
-			case "chrome": capabilities.setBrowserName("chrome"); break;
-			case "edge": capabilities.setBrowserName("MicrosoftEdge"); break;
-			case "firefox": capabilities.setBrowserName("firefox"); break;
-			default: System.out.println("No matching browser"); return;
-			}
-			
-			driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
-            
+        logger.info("========== Test Setup Started ==========");
+        logger.info("Execution Environment: {}", execEnv);
+        logger.info("OS: {}, Browser: {}", os, browser);
 
-        } else if ((p.getProperty("execution_env"))
-        		.equalsIgnoreCase("local"))
-        		{
-            // -------- Local Execution --------
-            logger.info("Running locally on {}", br);
-
-            switch(br.toLowerCase())
-			{
-			case "chrome" : driver=new ChromeDriver(); break;
-			case "edge" : driver=new EdgeDriver(); break;
-			case "firefox": driver=new FirefoxDriver(); break;
-			default : System.out.println("Invalid browser name.."); return;
-			}            logger.info("Local browser initialized successfully.");
+        if (execEnv.equals("remote")) {
+            DesiredCapabilities caps = new DesiredCapabilities();
+            caps.setPlatform(Platform.WIN11);
+            caps.setBrowserName(browser);
+            driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
         } else {
-            throw new IllegalArgumentException("Invalid execution_env value in config.properties: " + execEnv);
+            driver.set(DriverFactory.initDriver(browser));
         }
 
-        // -------- Common Setup --------
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
-        String appUrl = p.getProperty("appURL2", "https://example.com");
-        driver.get(appUrl);
-        driver.manage().window().fullscreen();
+        getDriver().manage().deleteAllCookies();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
-        logger.info("Navigated to: {}", appUrl);
-        logger.info("===== Test Setup Completed =====");
+        getDriver().get(p.getProperty("appURL2"));
+        logger.info("Navigated to: {}", p.getProperty("appURL2"));
+        logger.info("========== Setup Completed ==========");
     }
 
-    private void setPlatform(String os, Object options) {
-        Platform platform;
-        switch (os.toLowerCase()) {
-            case "windows":
-                platform = Platform.WINDOWS;
-                break;
-            case "linux":
-                platform = Platform.LINUX;
-                break;
-            case "mac":
-                platform = Platform.MAC;
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported OS: " + os);
-        }
-        if (options instanceof ChromeOptions)
-            ((ChromeOptions) options).setCapability("platformName", platform);
-        else if (options instanceof FirefoxOptions)
-            ((FirefoxOptions) options).setCapability("platformName", platform);
-        else if (options instanceof EdgeOptions)
-            ((EdgeOptions) options).setCapability("platformName", platform);
-    }
-
-    @AfterClass(groups = {"Sanity", "Regression", "Master"})
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
-        if (driver != null) {
+        if (getDriver() != null) {
             logger.info("Closing browser...");
-            driver.quit();
+            getDriver().quit();
             logger.info("Browser closed successfully.");
         }
     }
 
-    // -------- Utility Methods --------
-    public String randomeString() {
-        return RandomStringUtils.randomAlphabetic(5);
+    // Thread-safe getter
+    public static WebDriver getDriver() {
+        return driver.get();
     }
 
-    public String randomeNumber() {
-        return RandomStringUtils.randomNumeric(10);
-    }
+    // Utilities
+    public String randomString() { return RandomStringUtils.randomAlphabetic(5); }
+    public String randomNumber() { return RandomStringUtils.randomNumeric(6); }
 
-    public String randomeAlphaNumberic() {
-        return RandomStringUtils.randomAlphabetic(3) + "@" + RandomStringUtils.randomNumeric(3);
-    }
-
-    public String captureScreen(String tname) throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-
-        String targetDir = System.getProperty("user.dir") + File.separator + "screenshots";
-        File targetFile = new File(targetDir, tname + "_" + timeStamp + ".png");
-        targetFile.getParentFile().mkdirs();
-
-        Files.copy(sourceFile.toPath(), targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-        logger.info("Screenshot captured: {}", targetFile.getAbsolutePath());
-        return targetFile.getAbsolutePath();
+    public String captureScreen(String testName) throws IOException {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+        String path = System.getProperty("user.dir") + "/screenshots/" + testName + "_" + timestamp + ".png";
+        Files.copy(src.toPath(), new File(path).toPath(), StandardCopyOption.REPLACE_EXISTING);
+        logger.info("Screenshot captured: {}", path);
+        return path;
     }
 }

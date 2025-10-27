@@ -17,15 +17,15 @@ public class TC003_LoginDDT_Test extends BaseClass {
 		try {
 			logger.info("*********** Starting TC003_LoginDDT_Test **********");
 
-			HomePage hp = new HomePage(driver);
+			HomePage hp = new HomePage(getDriver());
 			hp.clickMyAccount();
 			hp.clickLogin();
 
-			LoginPage lp = new LoginPage(driver);
+			LoginPage lp = new LoginPage(getDriver());
 			lp.setEmail(email);
 			lp.setPassword(pwd);
 			lp.clickLogin();
-			MyAccountPage macc = new MyAccountPage(driver);
+			MyAccountPage macc = new MyAccountPage(getDriver());
 
 			boolean target = macc.isMyAccountPageIsExist();
 			//System.out.println(target);
