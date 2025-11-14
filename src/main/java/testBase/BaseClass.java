@@ -50,7 +50,7 @@ public class BaseClass {
 
 		DriverFactory.getDriver().manage().deleteAllCookies();
 		DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		DriverFactory.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+//		DriverFactory.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
 		DriverFactory.getDriver().get(p.getProperty("appURL2"));
 

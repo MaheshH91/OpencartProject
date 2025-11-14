@@ -27,7 +27,6 @@ public class DriverFactory {
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
-
             tlDriver.set(new ChromeDriver(options));
         }
 
@@ -49,7 +48,6 @@ public class DriverFactory {
             options.addArguments("--headless");
             options.addArguments("--width=1920");
             options.addArguments("--height=1080");
-
             tlDriver.set(new FirefoxDriver(options));
         }
 

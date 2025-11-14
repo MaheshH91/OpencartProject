@@ -5,11 +5,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import testBase.BaseClass;
+import factory.DriverFactory;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
-import testBase.BaseClass;
-import factory.DriverFactory;
 
 import java.time.Duration;
 

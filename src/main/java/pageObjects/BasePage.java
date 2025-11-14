@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-class BasePage {
+public class BasePage {
 
 	WebDriver driver;
 
