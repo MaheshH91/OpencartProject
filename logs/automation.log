@@ -1,201 +1,84 @@
-2025-10-27 12:08:15 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:08:15 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:08:15 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:08:28 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:08:28 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:08:29 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:08:29 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:08:31 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:08:32 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:08:32 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:08:32 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:08:32 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:08:32 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:08:32 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:08:32 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:08:37 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:08:37 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:08:37 INFO  BaseClass:13 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:08:39 INFO  BaseClass:20 - Clicked on Register link
-2025-10-27 12:08:39 INFO  BaseClass:23 - Filling registration details...
-2025-10-27 12:08:40 ERROR BaseClass:45 - ? Exception during test execution: Keys to send should be a not null CharSequence
-2025-10-27 12:08:40 INFO  BaseClass:48 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:08:40 INFO  BaseClass:86 - Screenshot captured: C:\LaptopData\GroTechMindClass\OpencartProject/screenshots/verify_Account_Registration_20251027_120840.png
-2025-10-27 12:08:40 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:08:41 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:11:17 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:11:17 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:11:17 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:11:23 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:11:23 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:11:23 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:11:24 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:11:26 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:11:26 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:11:26 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:11:26 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:11:26 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:11:26 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:11:26 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:11:26 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:11:31 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:11:31 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:11:31 INFO  BaseClass:13 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:11:32 INFO  BaseClass:20 - Clicked on Register link
-2025-10-27 12:11:32 INFO  BaseClass:23 - Filling registration details...
-2025-10-27 12:11:33 ERROR BaseClass:45 - ? Exception during test execution: Keys to send should be a not null CharSequence
-2025-10-27 12:11:33 INFO  BaseClass:48 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:11:33 INFO  BaseClass:86 - Screenshot captured: C:\LaptopData\GroTechMindClass\OpencartProject/screenshots/verify_Account_Registration_20251027_121133.png
-2025-10-27 12:11:33 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:11:34 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:18:11 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:18:11 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:18:11 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:18:33 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:18:33 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:18:33 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:18:34 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:18:34 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:18:35 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:18:35 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:18:35 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:18:37 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:18:37 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:18:37 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:18:37 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:18:41 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:18:41 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:18:41 INFO  BaseClass:13 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:18:42 INFO  BaseClass:20 - Clicked on Register link
-2025-10-27 12:18:42 INFO  BaseClass:23 - Filling registration details...
-2025-10-27 12:18:44 ERROR BaseClass:45 - ? Exception during test execution: Keys to send should be a not null CharSequence
-2025-10-27 12:18:44 INFO  BaseClass:48 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:18:44 INFO  BaseClass:86 - Screenshot captured: C:\LaptopData\GroTechMindClass\OpencartProject/screenshots/verify_Account_Registration_20251027_121844.png
-2025-10-27 12:18:44 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:18:44 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:31:04 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:31:04 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:31:04 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:31:07 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:31:07 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:31:07 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:31:08 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:31:10 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:31:10 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:31:10 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:31:10 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:31:10 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:31:10 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:31:10 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:31:10 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:31:13 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:31:13 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:31:13 INFO  BaseClass:13 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:31:13 INFO  BaseClass:20 - Clicked on Register link
-2025-10-27 12:31:14 INFO  BaseClass:23 - Filling registration details...
-2025-10-27 12:31:14 ERROR BaseClass:45 - ? Exception during test execution: Keys to send should be a not null CharSequence
-2025-10-27 12:31:14 INFO  BaseClass:48 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:31:14 INFO  BaseClass:86 - Screenshot captured: C:\LaptopData\GroTechMindClass\OpencartProject/screenshots/verify_Account_Registration_20251027_123114.png
-2025-10-27 12:31:14 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:31:15 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:31:15 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:31:15 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:31:15 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:31:17 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:31:17 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:31:19 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:31:22 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:31:22 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:31:24 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:31:24 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:31:27 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:31:27 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:31:49 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:31:49 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:32:10 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:32:10 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:32:11 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:38:18 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:38:18 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:38:18 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:38:23 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:38:23 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:38:23 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:38:24 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:38:24 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:38:25 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:38:25 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:38:25 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:38:25 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:38:25 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:38:25 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:38:25 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:38:28 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:38:28 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:38:28 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:38:29 INFO  BaseClass:21 - Clicked on Register link
-2025-10-27 12:38:29 INFO  BaseClass:24 - Filling registration details...
-2025-10-27 12:38:32 INFO  BaseClass:37 - Validating registration success message...
-2025-10-27 12:38:32 INFO  BaseClass:43 - ? Registration successful, test passed!
-2025-10-27 12:38:32 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:38:32 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:38:32 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:38:32 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:38:32 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:38:32 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:38:36 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:38:36 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:38:39 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:38:42 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:38:42 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:38:44 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:38:44 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:38:47 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:38:47 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:39:09 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:39:09 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:39:30 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:39:30 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:39:30 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:43:35 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:43:35 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:43:35 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:43:41 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:43:41 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:43:41 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
-2025-10-27 12:43:42 INFO  BaseClass:20 - Clicked on Login link
-2025-10-27 12:43:42 INFO  BaseClass:27 - Entered login credentials
-2025-10-27 12:43:43 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ?
-2025-10-27 12:43:43 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
-2025-10-27 12:43:43 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:43:44 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:43:44 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:43:44 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:43:44 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:43:48 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:43:48 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:43:48 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
-2025-10-27 12:43:49 INFO  BaseClass:21 - Clicked on Register link
-2025-10-27 12:43:49 INFO  BaseClass:24 - Filling registration details...
-2025-10-27 12:43:51 INFO  BaseClass:37 - Validating registration success message...
-2025-10-27 12:43:51 INFO  BaseClass:43 - ? Registration successful, test passed!
-2025-10-27 12:43:51 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
-2025-10-27 12:43:51 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:43:51 INFO  BaseClass:68 - Browser closed successfully.
-2025-10-27 12:43:51 INFO  BaseClass:41 - ========== Test Setup Started ==========
-2025-10-27 12:43:51 INFO  BaseClass:42 - Execution Environment: local
-2025-10-27 12:43:51 INFO  BaseClass:43 - OS: Windows, Browser: chrome
-2025-10-27 12:43:56 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
-2025-10-27 12:43:56 INFO  BaseClass:60 - ========== Setup Completed ==========
-2025-10-27 12:43:58 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:44:02 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:44:02 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:44:04 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:44:04 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:44:07 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:44:07 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:44:29 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:44:29 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-10-27 12:44:51 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-10-27 12:44:51 INFO  BaseClass:66 - Closing browser...
-2025-10-27 12:44:51 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 03:59:40 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 03:59:40 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 03:59:40 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 03:59:45 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 03:59:45 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 03:59:45 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
+2025-11-05 03:59:47 INFO  BaseClass:20 - Clicked on Login link
+2025-11-05 03:59:49 INFO  BaseClass:27 - Entered login credentials
+2025-11-05 03:59:49 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ✅
+2025-11-05 03:59:49 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
+2025-11-05 03:59:49 INFO  BaseClass:66 - Closing browser...
+2025-11-05 03:59:49 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 03:59:49 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 03:59:49 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 03:59:49 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 03:59:53 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 03:59:53 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 03:59:53 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
+2025-11-05 03:59:54 INFO  BaseClass:21 - Clicked on Register link
+2025-11-05 03:59:54 INFO  BaseClass:24 - Filling registration details...
+2025-11-05 03:59:56 INFO  BaseClass:37 - Validating registration success message...
+2025-11-05 03:59:56 INFO  BaseClass:43 - ✅ Registration successful, test passed!
+2025-11-05 03:59:56 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
+2025-11-05 03:59:56 INFO  BaseClass:66 - Closing browser...
+2025-11-05 03:59:57 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 03:59:57 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 03:59:57 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 03:59:57 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 04:00:00 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 04:00:00 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 04:00:05 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:00:08 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:00:08 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:00:10 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:00:10 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:00:13 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:00:13 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:00:34 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:00:34 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:00:55 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:00:55 INFO  BaseClass:66 - Closing browser...
+2025-11-05 04:00:56 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 04:10:38 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 04:10:38 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 04:10:38 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 04:10:45 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 04:10:45 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 04:10:45 INFO  BaseClass:14 - *********** Starting TC_002_LoginTest **********
+2025-11-05 04:10:50 INFO  BaseClass:20 - Clicked on Login link
+2025-11-05 04:10:52 INFO  BaseClass:27 - Entered login credentials
+2025-11-05 04:10:53 INFO  BaseClass:34 - Login verification successful - My Account Page displayed ✅
+2025-11-05 04:10:53 INFO  BaseClass:41 - *********** Finished TC_002_LoginTest **********
+2025-11-05 04:10:53 INFO  BaseClass:66 - Closing browser...
+2025-11-05 04:10:54 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 04:10:54 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 04:10:54 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 04:10:54 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 04:10:57 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 04:10:57 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 04:10:57 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
+2025-11-05 04:10:58 INFO  BaseClass:21 - Clicked on Register link
+2025-11-05 04:10:58 INFO  BaseClass:24 - Filling registration details...
+2025-11-05 04:11:01 INFO  BaseClass:37 - Validating registration success message...
+2025-11-05 04:11:01 INFO  BaseClass:43 - ✅ Registration successful, test passed!
+2025-11-05 04:11:01 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
+2025-11-05 04:11:01 INFO  BaseClass:66 - Closing browser...
+2025-11-05 04:11:01 INFO  BaseClass:68 - Browser closed successfully.
+2025-11-05 04:11:01 INFO  BaseClass:41 - ========== Test Setup Started ==========
+2025-11-05 04:11:01 INFO  BaseClass:42 - Execution Environment: local
+2025-11-05 04:11:01 INFO  BaseClass:43 - OS: Windows, Browser: chrome
+2025-11-05 04:11:06 INFO  BaseClass:59 - Navigated to: https://tutorialsninja.com/demo/
+2025-11-05 04:11:06 INFO  BaseClass:60 - ========== Setup Completed ==========
+2025-11-05 04:11:11 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:11:16 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:11:16 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:11:20 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:11:20 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:11:25 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:11:25 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:11:49 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:11:49 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
+2025-11-05 04:12:10 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
+2025-11-05 04:12:10 INFO  BaseClass:66 - Closing browser...
+2025-11-05 04:12:10 INFO  BaseClass:68 - Browser closed successfully.
