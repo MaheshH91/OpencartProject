@@ -23,67 +23,69 @@ import factory.DriverFactory;
 
 public class BaseClass {
 
-    public static Logger logger = LogManager.getLogger(BaseClass.class);
-    public static Properties p;
-    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	public static Logger logger = LogManager.getLogger(BaseClass.class);
+	public static Properties p;
 
-    @BeforeClass(alwaysRun = true)
-    @Parameters({"os", "browser"})
-    public void setup(@Optional("windows") String os, @Optional("chrome") String browser) throws IOException {
+	@BeforeClass(alwaysRun = true)
+	@Parameters({ "os", "browser" })
+	public void setup(@Optional("windows") String os, @Optional("chrome") String browser) throws IOException {
 
-        // Load config.properties
-        String configPath = System.getProperty("user.dir") + "/src/test/resources/config.properties";
-        p = new Properties();
-        p.load(new FileReader(configPath));
+		// Load config
+		p = new Properties();
+		p.load(new FileReader(System.getProperty("user.dir") + "/src/test/resources/config.properties"));
 
-        String execEnv = p.getProperty("execution_env").toLowerCase();
+		String execEnv = p.getProperty("execution_env").toLowerCase();
 
-        logger.info("========== Test Setup Started ==========");
-        logger.info("Execution Environment: {}", execEnv);
-        logger.info("OS: {}, Browser: {}", os, browser);
+		logger.info("===== Test Setup Started =====");
+		logger.info("Execution: {}", execEnv);
 
-        if (execEnv.equals("remote")) {
-            DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setPlatform(Platform.WIN11);
-            caps.setBrowserName(browser);
-            driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
-        } else {
-            driver.set(DriverFactory.initDriver(browser));
-        }
+		if (execEnv.equals("remote")) {
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setBrowserName(browser);
+			caps.setPlatform(Platform.WIN11);
+			DriverFactory.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
+		} else {
+			DriverFactory.initDriver(browser);
+		}
 
-        getDriver().manage().deleteAllCookies();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		DriverFactory.getDriver().manage().deleteAllCookies();
+		DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		DriverFactory.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
-        getDriver().get(p.getProperty("appURL2"));
-        logger.info("Navigated to: {}", p.getProperty("appURL2"));
-        logger.info("========== Setup Completed ==========");
-    }
+		DriverFactory.getDriver().get(p.getProperty("appURL2"));
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown() {
-        if (getDriver() != null) {
-            logger.info("Closing browser...");
-            getDriver().quit();
-            logger.info("Browser closed successfully.");
-        }
-    }
+		logger.info("Navigated to {}", p.getProperty("appURL2"));
+		logger.info("===== Setup Completed =====");
+	}
 
-    // Thread-safe getter
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
+	@AfterClass(alwaysRun = true)
+	public void tearDown() {
+		if (DriverFactory.getDriver() != null) {
+			logger.info("Closing driver...");
+			DriverFactory.quitDriver();
+			logger.info("Driver closed.");
+		}
+	}
 
-    // Utilities
-    public String randomString() { return RandomStringUtils.randomAlphabetic(5); }
-    public String randomNumber() { return RandomStringUtils.randomNumeric(6); }
+	// Thread-safe getter for driver
+	public static WebDriver getDriver() {
+		return DriverFactory.getDriver();
+	}
 
-    public String captureScreen(String testName) throws IOException {
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-        String path = System.getProperty("user.dir") + "/screenshots/" + testName + "_" + timestamp + ".png";
-        Files.copy(src.toPath(), new File(path).toPath(), StandardCopyOption.REPLACE_EXISTING);
-        logger.info("Screenshot captured: {}", path);
-        return path;
-    }
+	// Utilities
+	public String randomString() {
+		return RandomStringUtils.randomAlphabetic(5);
+	}
+
+	public String randomNumber() {
+		return RandomStringUtils.randomNumeric(6);
+	}
+
+	public String captureScreen(String testName) throws IOException {
+		File src = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String path = System.getProperty("user.dir") + "/screenshots/" + testName + "_" + timestamp + ".png";
+		Files.copy(src.toPath(), new File(path).toPath(), StandardCopyOption.REPLACE_EXISTING);
+		return path;
+	}
 }
