@@ -12,32 +12,42 @@ public class DriverFactory {
 
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    // NEW: Needed for Selenium Grid / RemoteWebDriver
     public static void setDriver(WebDriver driver) {
         tlDriver.set(driver);
     }
 
     public static WebDriver initDriver(String browser) {
 
+        boolean headless = System.getProperty("headless") != null;   // 👈 IMPORTANT
+
         if (browser.equalsIgnoreCase("chrome")) {
 
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--window-size=1920,1080");
+
+            if (headless) {
+                options.addArguments("--headless=new");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-software-rasterizer"); // 👈 FIX
+                options.addArguments("--window-size=1920,1080");
+            }
+
             tlDriver.set(new ChromeDriver(options));
         }
 
         else if (browser.equalsIgnoreCase("edge")) {
 
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--headless=new");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--window-size=1920,1080");
+
+            if (headless) {
+                options.addArguments("--headless=new");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-software-rasterizer");
+                options.addArguments("--window-size=1920,1080");
+            }
 
             tlDriver.set(new EdgeDriver(options));
         }
@@ -45,9 +55,13 @@ public class DriverFactory {
         else if (browser.equalsIgnoreCase("firefox")) {
 
             FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("--headless");
-            options.addArguments("--width=1920");
-            options.addArguments("--height=1080");
+
+            if (headless) {
+                options.addArguments("-headless");
+                options.addArguments("--width=1920");
+                options.addArguments("--height=1080");
+            }
+
             tlDriver.set(new FirefoxDriver(options));
         }
 
