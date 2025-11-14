@@ -23,23 +23,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Install Chrome
+    # ✅ FIXED: Install Chrome + ChromeDriver safely
+    - name: Install Chrome + ChromeDriver
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget gnupg2
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-        sudo apt-get update
+        sudo apt-get install -y wget curl unzip
         sudo apt-get install -y google-chrome-stable
+        sudo apt-get install -y chromium-chromedriver
+        sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver || true
 
-    - name: Install ChromeDriver
-      run: |
-        CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
-        DRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_$CHROME_VERSION")
-        wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$DRIVER_VERSION/linux64/chromedriver-linux64.zip
-        unzip chromedriver-linux64.zip
-        sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
-
+    # Run tests in headless mode
     - name: Run Maven Tests (Headless)
       run: mvn -B clean test -Dheadless=true
