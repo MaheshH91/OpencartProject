@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
     - uses: actions/checkout@v4
 
     - name: Set up JDK 17
@@ -23,13 +24,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    # Install Chrome + ChromeDriver
-    - name: Install Google Chrome
-      uses: browser-actions/setup-chrome@v1
+    # Install Chrome + ChromeDriver (Working)
+    - name: Install Chrome + ChromeDriver
+      uses: nanasess/setup-chromedriver@v1
 
-    - name: Install ChromeDriver
-      uses: browser-actions/setup-chromedriver@v1
+    - name: Verify Chrome installation
+      run: |
+        google-chrome --version
+        chromedriver --version
 
-    # Run tests
+    # Run Tests
     - name: Run Maven Tests (Headless)
-      run: mvn -B clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=ci
+      run: mvn clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=ci
