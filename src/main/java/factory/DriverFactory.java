@@ -19,6 +19,7 @@ public class DriverFactory {
     public static WebDriver initDriver(String browser) {
 
         boolean headless = System.getProperty("headless") != null;   // 👈 IMPORTANT
+        System.out.println("DEBUG: HEADLESS FLAG = " + System.getProperty("headless"));
 
         if (browser.equalsIgnoreCase("chrome")) {
 
