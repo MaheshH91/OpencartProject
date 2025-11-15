@@ -24,14 +24,12 @@ jobs:
         cache: maven
 
     # Install Chrome + ChromeDriver
-    - name: Install Chrome + ChromeDriver
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget curl unzip
-        sudo apt-get install -y google-chrome-stable
-        sudo apt-get install -y chromium-chromedriver
-        sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver || true
+    - name: Install Google Chrome
+      uses: browser-actions/setup-chrome@v1
 
-    # IMPORTANT FIX
+    - name: Install ChromeDriver
+      uses: browser-actions/setup-chromedriver@v1
+
+    # Run tests
     - name: Run Maven Tests (Headless)
-      run: mvn -B clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=local
+      run: mvn -B clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=ci
