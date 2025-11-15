@@ -1,98 +1,12 @@
-2025-11-14 19:10:45 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:10:45 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:12:45 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:12:45 INFO  BaseClass:66 - Driver closed.
-2025-11-14 19:12:45 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:12:45 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:13:12 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 19:13:12 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 19:13:12 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
-2025-11-14 19:13:16 INFO  BaseClass:21 - Clicked on Register link
-2025-11-14 19:13:16 INFO  BaseClass:24 - Filling registration details...
-2025-11-14 19:13:18 INFO  BaseClass:37 - Validating registration success message...
-2025-11-14 19:13:18 INFO  BaseClass:43 - ✅ Registration successful, test passed!
-2025-11-14 19:13:18 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
-2025-11-14 19:13:18 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:13:18 INFO  BaseClass:66 - Driver closed.
-2025-11-14 19:13:18 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:13:18 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:13:50 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:13:50 INFO  BaseClass:66 - Driver closed.
-2025-11-14 19:20:57 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:20:57 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:21:17 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 19:21:17 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 19:21:17 INFO  BaseClass:21 - *********** Starting TC_002_LoginTest **********
-2025-11-14 19:21:17 INFO  BaseClass:27 - Opening Login page...
-2025-11-14 19:21:18 INFO  BaseClass:35 - Entered login credentials
-2025-11-14 19:21:19 INFO  BaseClass:46 - ✅ Login successful, My Account page visible
-2025-11-14 19:21:19 INFO  BaseClass:61 - *********** Finished TC_002_LoginTest **********
-2025-11-14 19:21:19 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:21:19 INFO  BaseClass:66 - Driver closed.
-2025-11-14 19:21:19 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:21:19 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:21:33 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 19:21:33 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 19:21:33 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
-2025-11-14 19:21:38 INFO  BaseClass:21 - Clicked on Register link
-2025-11-14 19:21:38 INFO  BaseClass:24 - Filling registration details...
-2025-11-14 19:21:42 INFO  BaseClass:37 - Validating registration success message...
-2025-11-14 19:21:42 INFO  BaseClass:43 - ✅ Registration successful, test passed!
-2025-11-14 19:21:42 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
-2025-11-14 19:21:42 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:21:42 INFO  BaseClass:66 - Driver closed.
-2025-11-14 19:21:42 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 19:21:42 INFO  BaseClass:40 - Execution: local
-2025-11-14 19:22:09 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 19:22:09 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 19:22:11 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 19:22:16 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 19:22:16 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 19:22:19 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 19:22:19 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 19:22:27 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 19:22:27 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 19:22:43 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 19:22:43 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 19:23:03 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 19:23:03 INFO  BaseClass:64 - Closing driver...
-2025-11-14 19:23:03 INFO  BaseClass:66 - Driver closed.
-2025-11-14 20:49:54 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 20:49:54 INFO  BaseClass:40 - Execution: local
-2025-11-14 20:52:59 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 20:52:59 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 20:52:59 INFO  BaseClass:21 - *********** Starting TC_002_LoginTest **********
-2025-11-14 20:52:59 INFO  BaseClass:27 - Opening Login page...
-2025-11-14 20:53:47 INFO  BaseClass:35 - Entered login credentials
-2025-11-14 20:53:47 INFO  BaseClass:46 - ✅ Login successful, My Account page visible
-2025-11-14 20:53:47 INFO  BaseClass:61 - *********** Finished TC_002_LoginTest **********
-2025-11-14 20:53:47 INFO  BaseClass:64 - Closing driver...
-2025-11-14 20:53:47 INFO  BaseClass:66 - Driver closed.
-2025-11-14 20:53:47 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 20:53:47 INFO  BaseClass:40 - Execution: local
-2025-11-14 20:54:26 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 20:54:26 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 20:54:26 INFO  BaseClass:14 - ***** Starting TC001_AccountRegistrationTest *****
-2025-11-14 20:54:32 INFO  BaseClass:21 - Clicked on Register link
-2025-11-14 20:54:32 INFO  BaseClass:24 - Filling registration details...
-2025-11-14 20:54:37 INFO  BaseClass:37 - Validating registration success message...
-2025-11-14 20:54:38 INFO  BaseClass:43 - ✅ Registration successful, test passed!
-2025-11-14 20:54:38 INFO  BaseClass:49 - ***** Finished TC001_AccountRegistrationTest *****
-2025-11-14 20:54:38 INFO  BaseClass:64 - Closing driver...
-2025-11-14 20:54:38 INFO  BaseClass:66 - Driver closed.
-2025-11-14 20:54:38 INFO  BaseClass:39 - ===== Test Setup Started =====
-2025-11-14 20:54:38 INFO  BaseClass:40 - Execution: local
-2025-11-14 20:55:04 INFO  BaseClass:57 - Navigated to https://tutorialsninja.com/demo/
-2025-11-14 20:55:04 INFO  BaseClass:58 - ===== Setup Completed =====
-2025-11-14 20:55:05 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 20:55:15 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 20:55:15 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 20:55:23 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 20:55:23 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 20:55:29 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 20:55:29 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 20:55:48 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 20:55:48 INFO  BaseClass:18 - *********** Starting TC003_LoginDDT_Test **********
-2025-11-14 20:56:06 INFO  BaseClass:68 - *********** Finished TC003_LoginDDT_Test **********
-2025-11-14 20:56:06 INFO  BaseClass:64 - Closing driver...
-2025-11-14 20:56:07 INFO  BaseClass:66 - Driver closed.
+2025-11-15 08:14:39 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:14:39 INFO  BaseClass:40 - Execution: local
+2025-11-15 08:14:39 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:14:39 INFO  BaseClass:40 - Execution: local
+2025-11-15 08:14:39 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:14:39 INFO  BaseClass:40 - Execution: local
+2025-11-15 08:16:54 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:16:54 INFO  BaseClass:40 - Execution: local
+2025-11-15 08:16:54 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:16:54 INFO  BaseClass:40 - Execution: local
+2025-11-15 08:16:54 INFO  BaseClass:39 - ===== Test Setup Started =====
+2025-11-15 08:16:54 INFO  BaseClass:40 - Execution: local
