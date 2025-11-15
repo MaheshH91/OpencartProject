@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    # ✅ FIXED: Install Chrome + ChromeDriver safely
+    # Install Chrome + ChromeDriver
     - name: Install Chrome + ChromeDriver
       run: |
         sudo apt-get update
@@ -32,6 +32,6 @@ jobs:
         sudo apt-get install -y chromium-chromedriver
         sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver || true
 
-    # Run tests in headless mode
+    # IMPORTANT FIX
     - name: Run Maven Tests (Headless)
-      run: mvn -B clean test -Dheadless=true
+      run: mvn -B clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=local
