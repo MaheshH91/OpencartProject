@@ -88,4 +88,12 @@ public class BaseClass {
 		Files.copy(src.toPath(), new File(path).toPath(), StandardCopyOption.REPLACE_EXISTING);
 		return path;
 	}
+	public static String takeScreenshot(String testName) throws IOException {
+	    File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+	    String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+	    String path = System.getProperty("user.dir") + "/screenshots/" + testName + "_" + timestamp + ".png";
+	    Files.copy(src.toPath(), new File(path).toPath(), StandardCopyOption.REPLACE_EXISTING);
+	    return path;
+	}
+
 }

@@ -37,7 +37,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
   <testcase classname="testBase.BaseClass" name="@AfterClass tearDown" time="0.0">
     <skipped/>
   </testcase> <!-- @AfterClass tearDown -->
-  <testcase classname="testcases.TC_002_LoginTest" name="verify_Login" time="0.0">
+  <testcase classname="testcases.TC002_LoginTest" name="verify_Login" time="0.0">
     <skipped/>
   </testcase> <!-- verify_Login -->
 </testsuite> <!-- Default test -->

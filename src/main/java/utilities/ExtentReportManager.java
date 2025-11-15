@@ -80,7 +80,7 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.INFO, result.getThrowable().getMessage());
 		
 		try {
-			String imgPath = new BaseClass().captureScreen(result.getName());
+			String imgPath = BaseClass.takeScreenshot(result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 			
 		} catch (IOException e1) {
@@ -103,7 +103,10 @@ public class ExtentReportManager implements ITestListener {
 		File extentReport = new File(pathOfExtentReport);
 		
 		try {
-			Desktop.getDesktop().browse(extentReport.toURI());
+			if (!System.getProperty("headless", "false").equals("true")) {
+			    Desktop.getDesktop().browse(extentReport.toURI());
+			}
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

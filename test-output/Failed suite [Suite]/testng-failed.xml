@@ -13,13 +13,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.TC_002_LoginTest">
+      <class name="testcases.TC002_LoginTest">
         <methods>
           <include name="tearDown"/>
           <include name="verify_Login"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testcases.TC_002_LoginTest -->
+      </class> <!-- testcases.TC002_LoginTest -->
     </classes>
   </test> <!-- grouping(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Suite]] -->

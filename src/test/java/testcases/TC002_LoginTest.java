@@ -13,12 +13,13 @@ import pageObjects.MyAccountPage;
 
 import java.time.Duration;
 
-public class TC_002_LoginTest extends BaseClass {
+public class TC002_LoginTest extends BaseClass {
 
     @Test(groups = {"Sanity", "Master"})
     public void verify_Login() {
+    	
         
-        logger.info("*********** Starting TC_002_LoginTest **********");
+        logger.info("*********** Starting TC002_LoginTest **********");
 
         try {
 
@@ -49,7 +50,7 @@ public class TC_002_LoginTest extends BaseClass {
             logger.error("❌ Login test failed", e);
 
             try {
-                String path = captureScreen("TC_002_LoginTest");
+                String path = captureScreen("TC002_LoginTest");
                 logger.info("📸 Screenshot saved at: " + path);
             } catch (Exception ex) {
                 logger.error("Failed to capture screenshot", ex);
@@ -58,6 +59,6 @@ public class TC_002_LoginTest extends BaseClass {
             Assert.fail("Login test failed unexpectedly: " + e.getMessage());
         }
 
-        logger.info("*********** Finished TC_002_LoginTest **********");
+        logger.info("*********** Finished TC002_LoginTest **********");
     }
 }
