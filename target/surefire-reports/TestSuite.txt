@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 3, Errors: 0, Skipped: 7, Time elapsed: 6.540 s <<< FAILURE! -- in TestSuite
-testcases.TC002_LoginTest.setup[Windows, ${browser:chrome}](0) -- Time elapsed: 2.317 s <<< FAILURE!
-java.lang.IllegalArgumentException: Unsupported browser: ${browser:chrome}
+Tests run: 10, Failures: 3, Errors: 0, Skipped: 7, Time elapsed: 3.267 s <<< FAILURE! -- in TestSuite
+testcases.TC002_LoginTest.setup[Windows, ${browser}](0) -- Time elapsed: 0.964 s <<< FAILURE!
+java.lang.IllegalArgumentException: Unsupported browser: ${browser}
 	at factory.DriverFactory.initDriver(DriverFactory.java:71)
 	at testBase.BaseClass.setup(BaseClass.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -35,8 +35,8 @@ java.lang.IllegalArgumentException: Unsupported browser: ${browser:chrome}
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-testcases.TC001_AccountRegistrationTest.setup[Windows, ${browser:chrome}](0) -- Time elapsed: 0.003 s <<< FAILURE!
-java.lang.IllegalArgumentException: Unsupported browser: ${browser:chrome}
+testcases.TC001_AccountRegistrationTest.setup[Windows, ${browser}](0) -- Time elapsed: 0.022 s <<< FAILURE!
+java.lang.IllegalArgumentException: Unsupported browser: ${browser}
 	at factory.DriverFactory.initDriver(DriverFactory.java:71)
 	at testBase.BaseClass.setup(BaseClass.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -68,8 +68,8 @@ java.lang.IllegalArgumentException: Unsupported browser: ${browser:chrome}
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-testcases.TC003_LoginDDT_Test.setup[Windows, ${browser:chrome}](0) -- Time elapsed: 0.002 s <<< FAILURE!
-java.lang.IllegalArgumentException: Unsupported browser: ${browser:chrome}
+testcases.TC003_LoginDDT_Test.setup[Windows, ${browser}](0) -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.IllegalArgumentException: Unsupported browser: ${browser}
 	at factory.DriverFactory.initDriver(DriverFactory.java:71)
 	at testBase.BaseClass.setup(BaseClass.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)

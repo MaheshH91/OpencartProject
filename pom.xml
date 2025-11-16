@@ -127,6 +127,14 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>master.xml</suiteXmlFile>
 						</suiteXmlFiles>
+						<!-- Add headless configuration here -->
+						<systemPropertyVariables>
+							<java.awt.headless>true</java.awt.headless>
+						</systemPropertyVariables>
+						<environmentVariables>
+							<DISPLAY>dummy</DISPLAY>
+						</environmentVariables>
+						<argLine>-Djava.awt.headless=true</argLine>
 					</configuration>
 				</plugin>
 				<!--<plugin>
@@ -147,7 +155,13 @@
 
 			</plugins>
 		</pluginManagement>
+		
+		<!-- Add this plugins section to ensure surefire plugin is actually used -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
-
-
 </project>

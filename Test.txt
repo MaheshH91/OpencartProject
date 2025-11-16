@@ -1,16 +1,1 @@
-//testing
-
-// testing
-
-// testing
-
-// testing
-
-// testing
-
-// testing
-
-// testing
-
-// testing
- 
+mvn clean test -Dbrowser=chrome -Dheadless=true

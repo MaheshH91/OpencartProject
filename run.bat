@@ -1,2 +1,2 @@
 cd C:\LaptopData\GroTechMindClass\OpencartProject
-mvn test
+mvn clean test -Dbrowser=chrome -Dheadless=true
