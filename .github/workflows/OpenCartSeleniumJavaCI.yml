@@ -6,15 +6,12 @@ on:
     branches: ["master"]
   pull_request:
     branches: ["master"]
-  schedule:
-    - cron: '0 22 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
     - uses: actions/checkout@v4
 
     - name: Set up JDK 17
@@ -22,17 +19,36 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
 
-    # Install Chrome + ChromeDriver (Working)
-    - name: Install Chrome + ChromeDriver
-      uses: nanasess/setup-chromedriver@v1
-
-    - name: Verify Chrome installation
+    # Install Google Chrome (Latest Stable)
+    - name: Install Google Chrome
       run: |
-        google-chrome --version
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo apt-get update
+        sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+
+    # Install correct ChromeDriver using Chrome-for-Testing API
+    - name: Install ChromeDriver
+      run: |
+        echo "Getting matching ChromeDriver..."
+        
+        # Get Chrome major version
+        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d'.' -f1)
+        echo "Installed Chrome major version: $CHROME_VERSION"
+
+        # Download last-known-good ChromeDriver from Google API
+        DRIVER_URL=$(wget -qO- https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json \
+          | jq -r '.channels.Stable.downloads.chromedriver[] | select(.platform == "linux64").url')
+
+        echo "ChromeDriver download URL: $DRIVER_URL"
+
+        wget -O chromedriver.zip "$DRIVER_URL"
+        unzip chromedriver.zip
+
+        sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+        sudo chmod +x /usr/local/bin/chromedriver
+
         chromedriver --version
 
-    # Run Tests
     - name: Run Maven Tests (Headless)
       run: mvn clean test -Dbrowser=chrome -Dheadless=true -Dexecution_env=ci
