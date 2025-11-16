@@ -10,7 +10,7 @@
 
 		<parameter name="os" value="Windows" />
 
-		<parameter name="browser" value="chrome" />
+		<!-- <parameter name="browser" value="chrome" /> -->
 		<classes>
 			<class name="testcases.TC002_LoginTest" />
 			<class name="testcases.TC001_AccountRegistrationTest" />
